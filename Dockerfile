@@ -20,4 +20,4 @@ COPY webapp/ .
 
 EXPOSE 8000
 
-CMD cd ~ && uvicorn main:app
+CMD uvicorn main:app
