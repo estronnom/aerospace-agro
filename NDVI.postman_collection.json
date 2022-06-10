@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "c344edb8-d618-4a66-adb6-4f056d5513f5",
+		"name": "NDVI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Geojson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://ndvi.collectivism.ovh/load_geojson/",
+					"protocol": "http",
+					"host": [
+						"ndvi",
+						"collectivism",
+						"ovh"
+					],
+					"path": [
+						"load_geojson",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Geojson",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ndvi.collectivism.ovh/delete_geojson/{ENTER_YOUR_TOKEN}",
+					"protocol": "http",
+					"host": [
+						"ndvi",
+						"collectivism",
+						"ovh"
+					],
+					"path": [
+						"delete_geojson",
+						"{ENTER_YOUR_TOKEN}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pull Satellite Images",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"estronnom\",\n  \"password\": \"9kd2VFwUhaS5ALu\",\n  \"days_offset\": 60,\n  \"cloud_cover\": 60\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ndvi.collectivism.ovh/pull_images/5eVQ8dVwCdo",
+					"protocol": "http",
+					"host": [
+						"ndvi",
+						"collectivism",
+						"ovh"
+					],
+					"path": [
+						"pull_images",
+						"5eVQ8dVwCdo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate NDVI",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"estronnom\",\n  \"password\": \"9kd2VFwUhaS5ALu\",\n  \"days_offset\": 60,\n  \"cloud_cover\": 60\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ndvi.collectivism.ovh/pull_images/5eVQ8dVwCdo",
+					"protocol": "http",
+					"host": [
+						"ndvi",
+						"collectivism",
+						"ovh"
+					],
+					"path": [
+						"pull_images",
+						"5eVQ8dVwCdo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TIF NDVI Picture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"estronnom\",\n  \"password\": \"9kd2VFwUhaS5ALu\",\n  \"days_offset\": 60,\n  \"cloud_cover\": 60\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ndvi.collectivism.ovh/pull_images/5eVQ8dVwCdo",
+					"protocol": "http",
+					"host": [
+						"ndvi",
+						"collectivism",
+						"ovh"
+					],
+					"path": [
+						"pull_images",
+						"5eVQ8dVwCdo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get PNG NDVI Picture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"estronnom\",\n  \"password\": \"9kd2VFwUhaS5ALu\",\n  \"days_offset\": 60,\n  \"cloud_cover\": 60\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ndvi.collectivism.ovh/png_ndvi/5eVQ8dVwCdo",
+					"protocol": "http",
+					"host": [
+						"ndvi",
+						"collectivism",
+						"ovh"
+					],
+					"path": [
+						"png_ndvi",
+						"5eVQ8dVwCdo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
